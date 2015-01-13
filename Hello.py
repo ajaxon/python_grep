@@ -1,6 +1,4 @@
 
-
-
 def hello_world():
 	""" Prints hello python """
 	print "Hello, Python! "
