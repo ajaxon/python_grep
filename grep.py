@@ -7,6 +7,7 @@ displayFileName = False
 
 
 def print_grep(line, filename):
+    ''' Prints the correct output to the console '''
     if displayFileName:
         print filename + ':' + line.strip()
     else:
@@ -26,6 +27,7 @@ def main(argv):
         files = args[1:]
     # not posix will require the use of glob module
     else:
+        files = []
         for filename in glob.glob(args[1]):
             files.append(filename)
 

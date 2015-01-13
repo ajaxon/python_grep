@@ -1,6 +1,6 @@
 
 def hello_world():
-	""" Prints hello python """
+	""" Prints hello python to the console"""
 	print "Hello, Python! "
 
 if __name__ == "__main__":
