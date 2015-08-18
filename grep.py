@@ -37,7 +37,7 @@ def main(argv):
         displayFileName = True
 
     for filename in files:
-        ''' For each file in files the file is opened and checked according to opts'''
+        ''' For each file in files the file is opened/checked with opts'''
         try:
             f = open(filename)
         except IOError:
@@ -59,13 +59,15 @@ def main(argv):
                 elif opt == '-v':
 
                     for line in f:
-                        ''' Loop through each line in the file f and print the line if the search string is not in it'''
+                        ''' Loop through each line in the file f and print the line if
+                            the search string is not in it'''
                         if args[0] not in line:
                             print_grep(line, filename)
         # if no opts
         else:
             for line in f:
-                ''' Loop through each line in the file and see if search string is in the line'''
+                ''' Loop through each line in the file
+                    and see if search string is in the line'''
                 if args[0] in line:
                     print_grep(line, filename)
 
